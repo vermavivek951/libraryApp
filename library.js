@@ -33,6 +33,7 @@ function addBookToLibrary(bookName,authorName,pages,haveRead) {
     const book = new Book(bookName,authorName,pages , haveRead);
     
     myLibrary.push(book);
+    displayBooksInLibrary()
     
 }
 
@@ -48,10 +49,3 @@ function displayBooksInLibrary() {
         displayBooks.appendChild(bookItem);
     }
 }
-
-const showBooksBtn = document.querySelector('#showBooksBtn');
-showBooksBtn.addEventListener('click' , (e) => {
-    displayBooksInLibrary();
-    console.log("abc");
-});
-
