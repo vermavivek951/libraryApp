@@ -1,0 +1,21 @@
+.library {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+}
+
+#displayBooks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.bookItem {
+    display: flex;
+    flex-direction: column;
+    width: 128px;
+    height: 200px;
+    justify-content: space-evenly;    
+}
