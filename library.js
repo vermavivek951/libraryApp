@@ -33,19 +33,19 @@ function addBookToLibrary(bookName,authorName,pages,haveRead) {
     const book = new Book(bookName,authorName,pages , haveRead);
     
     myLibrary.push(book);
-    displayBooksInLibrary()
+    displayBooksInLibrary(book)
     
 }
 
-function displayBooksInLibrary() {
-    for(let i=0 ; i<myLibrary.length ; i++) {
+function displayBooksInLibrary(book) {
+    
         const bookItem = document.createElement('div');
         bookItem.classList.add('bookItem');
-        bookItem.textContent = `BookName: ${myLibrary[i].title}
-                                    AuthorName: ${myLibrary[i].author}
-                                    NumberOfPages: ${myLibrary[i].pages}
-                                    haveRead: ${myLibrary[i].haveRead}`;
+        bookItem.textContent = `BookName: ${book.title}
+                                    AuthorName: ${book.author}
+                                    NumberOfPages: ${book.pages}
+                                    haveRead: ${book.haveRead}`;
        
         displayBooks.appendChild(bookItem);
-    }
+    
 }
